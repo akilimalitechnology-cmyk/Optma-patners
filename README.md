@@ -1,354 +1,119 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OPTIMA PARTNERS SAS - Conseil stratégique, ingénierie, investissement et innovation en RDC">
-    <meta name="keywords" content="conseil stratégique, ingénierie, investissement, innovation, projets, Kinshasa, RDC">
-    <title>OPTIMA PARTNERS SAS | Conseil Stratégique & Ingénierie - RDC</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <span class="text-gold">◆</span> OPTIMA PARTNERS
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="strengths.html">Nos Atouts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Réalisations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-gold text-dark ms-2" href="contact.html">Nous Contacter</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+# OPTIMA PARTNERS SAS - Website
 
-    <!-- Hero Banner -->
-    <section class="hero-banner d-flex align-items-center" style="background: linear-gradient(135deg, rgba(15, 32, 65, 0.9) 0%, rgba(25, 50, 100, 0.8) 100%), url('assets/images/hero-bg.jpg') no-repeat center/cover; min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-3 fw-bold text-white mb-4">
-                        Conseil Stratégique • Ingénierie • Innovation
-                    </h1>
-                    <p class="lead text-gold fs-5 mb-4">
-                        Accompagnons les entreprises, institutions et investisseurs dans la conception, le financement et la mise en œuvre de projets innovants et durables.
-                    </p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="services.html" class="btn btn-gold btn-lg px-5 text-dark fw-bold">
-                            <i class="fas fa-arrow-right me-2"></i> Nos Services
-                        </a>
-                        <a href="contact.html" class="btn btn-outline-gold btn-lg px-5 text-white fw-bold">
-                            <i class="fas fa-envelope me-2"></i> Nous Contacter
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-none d-lg-block">
-                    <div class="floating-card bg-gold bg-opacity-10 p-5 rounded-4 border border-gold">
-                        <div class="text-center">
-                            <i class="fas fa-rocket text-gold" style="font-size: 3rem;"></i>
-                            <h5 class="text-white mt-3">Performance & Innovation</h5>
-                            <p class="text-light small">Solutions intégrées pour votre succès</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+## Site Web Professionnel pour OPTIMA PARTNERS SAS
 
-    <!-- Key Figures Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="row text-center g-4">
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">50+</h3>
-                        <p class="text-dark fw-5">Projets Réalisés</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">100+</h3>
-                        <p class="text-dark fw-5">Clients Satisfaits</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">15+</h3>
-                        <p class="text-dark fw-5">Experts Qualifiés</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">7</h3>
-                        <p class="text-dark fw-5">Domaines d'Expertise</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+Cabinet de conseil stratégique, ingénierie et investissement basé à Kinshasa, République Démocratique du Congo.
 
-    <!-- About Brief Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4" style="color: #0f2041;">Qui Sommes-Nous ?</h2>
-                    <p class="text-secondary mb-3">
-                        OPTIMA PARTNERS SAS est un cabinet de conseil, d'ingénierie et d'investissement basé à Kinshasa, 
-                        spécialisé dans la conception, le financement et la mise en œuvre de projets innovants et durables.
-                    </p>
-                    <p class="text-secondary mb-3">
-                        Avec une approche intégrée et multidisciplinaire, nous accompagnons les entreprises, institutions, 
-                        investisseurs et organisations à travers la RDC et l'international.
-                    </p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="about.html" class="btn btn-dark fw-bold">En Savoir Plus</a>
-                        <a href="contact.html" class="btn btn-outline-dark fw-bold">Prendre un RDV</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-gold p-5 rounded-4 text-white">
-                        <h4 class="mb-3">Notre Slogan</h4>
-                        <blockquote class="display-6 fw-bold mb-0">
-                            "Conseil stratégique – Ingénierie – Investissement – Performance & Innovation"
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+### Caractéristiques
 
-    <!-- Services Overview -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5" style="color: #0f2041; font-size: 2.5rem;">
-                Nos Domaines d'Expertise
-            </h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-chart-line text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Conseil Stratégique</h5>
-                        <p class="text-secondary small">Transformation organisationnelle et optimisation des performances</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-cogs text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Ingénierie</h5>
-                        <p class="text-secondary small">Génie civil, industriel, minier, mécanique et électrique</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-lightbulb text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Innovation</h5>
-                        <p class="text-secondary small">Transformation digitale, IA et solutions technologiques</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-dollar-sign text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Investissement</h5>
-                        <p class="text-secondary small">Levée de fonds et structuration financière</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-building text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Construction</h5>
-                        <p class="text-secondary small">Infrastructures et solutions intégrées</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-graduation-cap text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Formation & RH</h5>
-                        <p class="text-secondary small">Renforcement des capacités et gestion des ressources humaines</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="services.html" class="btn btn-dark btn-lg px-5 fw-bold">
-                    Voir Tous les Services <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+✨ **Design Moderne & Premium**
+- Palette de couleurs: Bleu foncé (#0f2041), Blanc et Or (#d4af37)
+- Interface responsive et optimisée pour tous les appareils
+- Animations fluides et interactives
 
-    <!-- Values Section -->
-    <section class="py-5" style="background: linear-gradient(135deg, #0f2041 0%, #193264 100%);">
-        <div class="container">
-            <h2 class="text-center text-white fw-bold mb-5" style="font-size: 2.5rem;">Nos Valeurs Fondamentales</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-star text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Innovation</h5>
-                            <p class="text-light small">Créativité et solutions novatrices</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-award text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Excellence</h5>
-                            <p class="text-light small">Qualité supérieure en tout</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-handshake text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Intégrité</h5>
-                            <p class="text-light small">Éthique et transparence</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-rocket text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Performance</h5>
-                            <p class="text-light small">Résultats mesurables</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+📱 **Responsive Design**
+- Optimisé pour desktop, tablette et mobile
+- Navigation adaptée à tous les écrans
+- Performance optimale sur toutes les résolutions
 
-    <!-- CTA Section -->
-    <section class="py-5 bg-gold">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h3 class="fw-bold text-dark mb-2">Prêt à transformer votre projet ?</h3>
-                    <p class="text-dark mb-0">Contactez-nous dès maintenant pour une consultation gratuite avec nos experts</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <a href="contact.html" class="btn btn-dark btn-lg px-4 fw-bold">
-                        <i class="fas fa-envelope me-2"></i> Consultation Gratuite
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+🛠️ **Technologies Utilisées**
+- HTML5
+- CSS3 avec variables CSS et animations
+- JavaScript vanilla
+- Bootstrap 5.3
+- Font Awesome 6.4
+- Google Fonts (Poppins, Playfair Display)
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">OPTIMA PARTNERS</h6>
-                    <p class="small">Conseil stratégique, ingénierie et innovation en RDC</p>
-                    <div class="d-flex gap-2 mt-3">
-                        <a href="#" class="text-gold"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gold"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-gold"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gold"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">Navigation</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html" class="text-light text-decoration-none">Accueil</a></li>
-                        <li><a href="about.html" class="text-light text-decoration-none">�� Propos</a></li>
-                        <li><a href="services.html" class="text-light text-decoration-none">Services</a></li>
-                        <li><a href="projects.html" class="text-light text-decoration-none">Réalisations</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">Contact</h6>
-                    <p class="small mb-2">
-                        <i class="fas fa-phone text-gold me-2"></i>
-                        <a href="tel:+243979277469" class="text-light text-decoration-none">+243 979 277 469</a>
-                    </p>
-                    <p class="small mb-2">
-                        <i class="fas fa-envelope text-gold me-2"></i>
-                        <a href="mailto:office@optima-partnersas.com" class="text-light text-decoration-none">office@optima-partnersas.com</a>
-                    </p>
-                    <p class="small">
-                        <i class="fas fa-map-marker-alt text-gold me-2"></i>
-                        Kinshasa, RDC
-                    </p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">Ressources</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Télécharger Brochure</a></li>
-                        <li><a href="contact.html" class="text-light text-decoration-none">Demander Consultation</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="border-secondary">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="small mb-0">&copy; 2024 OPTIMA PARTNERS SAS. Tous droits réservés.</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <p class="small mb-0">
-                        <a href="#" class="text-light text-decoration-none">Politique de Confidentialité</a> | 
-                        <a href="#" class="text-light text-decoration-none">Conditions d'Utilisation</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+### Pages du Site
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-</body>
-</html>
+1. **Accueil (index.html)**
+   - Bannière héros avec proposition de valeur
+   - Chiffres clés
+   - Présentation rapide
+   - Domaines d'expertise
+   - Valeurs fondamentales
+   - Appels à l'action
+
+2. **À Propos (about.html)**
+   - Présentation de l'entreprise
+   - Vision, Mission et Durabilité
+   - Valeurs fondamentales détaillées
+   - Positionnement stratégique
+
+3. **Services (services.html)**
+   - 7 domaines d'expertise complets
+   - Description détaillée de chaque service
+   - Services complémentaires
+
+4. **Nos Atouts (strengths.html)**
+   - Forces compétitives
+   - Avantages différenciatifs
+   - Tableau comparatif
+
+5. **Réalisations (projects.html)**
+   - Galerie de projets
+   - Études de cas
+   - Références clients
+
+6. **Blog (blog.html)**
+   - Articles d'actualités
+   - Insights et tendances
+   - Conseils professionnels
+
+7. **Contact (contact.html)**
+   - Formulaire de contact
+   - Informations de contact
+   - Intégration WhatsApp Business
+   - Carte Google Maps
+
+### Structure de Fichiers
+
+```
+├── index.html
+├── about.html
+├── services.html
+├── strengths.html
+├── projects.html
+├── blog.html
+├── contact.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── documents/
+└── README.md
+```
+
+### Installation & Utilisation
+
+1. Clonez le repository
+2. Ouvrez `index.html` dans votre navigateur
+3. Personnalisez les couleurs, textes et images selon vos besoins
+
+### Personnalisation
+
+**Couleurs:**
+Modifiez les variables CSS dans `css/style.css`:
+```css
+:root {
+    --primary-dark: #0f2041;    /* Bleu foncé */
+    --primary-blue: #193264;    /* Bleu primaire */
+    --gold: #d4af37;             /* Or */
+}
+```
+
+**Contenu:**
+Tous les textes peuvent être modifiés directement dans les fichiers HTML.
+
+### Informations de Contact
+
+- **Email:** office@optima-partnersas.com
+- **Téléphone:** +243 979 277 469
+- **Localisation:** Kinshasa, République Démocratique du Congo
+
+### License
+
+© 2024 OPTIMA PARTNERS SAS. Tous droits réservés.

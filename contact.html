@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez OPTIMA PARTNERS SAS - Conseil stratégique et ingénierie en RDC">
+    <title>Nous Contacter | OPTIMA PARTNERS SAS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-gold">◆</span> OPTIMA PARTNERS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="strengths.html">Nos Atouts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Réalisations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-gold text-dark ms-2 active" href="contact.html">Nous Contacter</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header d-flex align-items-center" style="background: linear-gradient(135deg, #0f2041 0%, #193264 100%); min-height: 300px; margin-top: 60px;">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-white mb-3">Nous Contacter</h1>
+            <p class="lead text-gold">Nous sommes à votre écoute pour discuter de vos projets</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-gold rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-phone text-white" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">Téléphone</h5>
+                            <p class="text-secondary mb-0">
+                                <a href="tel:+243979277469" class="text-gold text-decoration-none fw-bold">+243 979 277 469</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-gold rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-envelope text-white" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">Email</h5>
+                            <p class="text-secondary mb-0">
+                                <a href="mailto:office@optima-partnersas.com" class="text-gold text-decoration-none fw-bold">office@optima-partnersas.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-gold rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-map-marker-alt text-white" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">Localisation</h5>
+                            <p class="text-secondary mb-0">
+                                Kinshasa<br>République Démocratique du Congo
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4" style="color: #0f2041;">Formulaire de Contact</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom Complet *</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adresse Email *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Téléphone</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="company" class="form-label">Entreprise</label>
+                            <input type="text" class="form-control" id="company" name="company">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Sujet *</label>
+                            <select class="form-control" id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet...</option>
+                                <option value="Conseil Stratégique">Conseil Stratégique</option>
+                                <option value="Ingénierie">Ingénierie</option>
+                                <option value="Investissement">Investissement</option>
+                                <option value="Innovation">Innovation</option>
+                                <option value="Formation">Formation</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-lg px-5 fw-bold">
+                            <i class="fas fa-paper-plane me-2"></i> Envoyer
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4" style="color: #0f2041;">Consultation Rapide</h2>
+                    <div class="bg-white p-5 rounded-4 shadow">
+                        <h5 class="fw-bold text-dark mb-3">Demander une Consultation Gratuite</h5>
+                        <p class="text-secondary mb-4">
+                            Vous avez un projet en tête ? Nos experts sont prêts à discuter de votre vision 
+                            et à vous proposer une solution adaptée à vos besoins.
+                        </p>
+                        <div class="d-grid gap-2 mb-4">
+                            <a href="https://wa.me/243979277469" target="_blank" class="btn btn-outline-dark fw-bold">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp Business
+                            </a>
+                            <a href="mailto:office@optima-partnersas.com" class="btn btn-dark fw-bold">
+                                <i class="fas fa-envelope me-2"></i> Envoyer un Email
+                            </a>
+                            <a href="tel:+243979277469" class="btn btn-outline-dark fw-bold">
+                                <i class="fas fa-phone me-2"></i> Appeler Maintenant
+                            </a>
+                        </div>
+                        <div class="border-top pt-4">
+                            <p class="small text-secondary mb-2">
+                                <strong>Horaires de Bureau:</strong><br>
+                                Lundi - Vendredi: 08:00 - 18:00<br>
+                                Samedi: 09:00 - 13:00<br>
+                                Dimanche: Fermé
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center" style="color: #0f2041;">Localisation</h2>
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8173618769526!2d15.314853!3d-4.3276869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sKinshasa!2sCD!5e0!3m2!1sen!2s!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold text-gold mb-3">OPTIMA PARTNERS</h6>
+                    <p class="small">Conseil stratégique, ingénierie et innovation en RDC</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="text-gold"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gold"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gold"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gold"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold text-gold mb-3">Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-light text-decoration-none">Accueil</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">À Propos</a></li>
+                        <li><a href="services.html" class="text-light text-decoration-none">Services</a></li>
+                        <li><a href="projects.html" class="text-light text-decoration-none">Réalisations</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold text-gold mb-3">Contact</h6>
+                    <p class="small mb-2">
+                        <i class="fas fa-phone text-gold me-2"></i>
+                        <a href="tel:+243979277469" class="text-light text-decoration-none">+243 979 277 469</a>
+                    </p>
+                    <p class="small mb-2">
+                        <i class="fas fa-envelope text-gold me-2"></i>
+                        <a href="mailto:office@optima-partnersas.com" class="text-light text-decoration-none">office@optima-partnersas.com</a>
+                    </p>
+                    <p class="small">
+                        <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                        Kinshasa, RDC
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold text-gold mb-3">Ressources</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Télécharger Brochure</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Demander Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="small mb-0">&copy; 2024 OPTIMA PARTNERS SAS. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-light text-decoration-none">Politique de Confidentialité</a> | 
+                        <a href="#" class="text-light text-decoration-none">Conditions d'Utilisation</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
