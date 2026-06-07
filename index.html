@@ -3,352 +3,1268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OPTIMA PARTNERS SAS - Conseil stratégique, ingénierie, investissement et innovation en RDC">
-    <meta name="keywords" content="conseil stratégique, ingénierie, investissement, innovation, projets, Kinshasa, RDC">
-    <title>OPTIMA PARTNERS SAS | Conseil Stratégique & Ingénierie - RDC</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>OPTIMA PARTNERS SAS - Conseil Stratégique & Ingénierie en RDC</title>
+    <meta name="description" content="OPTIMA PARTNERS SAS - Cabinet de conseil stratégique, ingénierie, investissement et développement de projets à Kinshasa, RDC">
+    <meta name="keywords" content="conseil stratégique, ingénierie, investissement, RDC, Kinshasa, développement de projets">
+    <meta property="og:title" content="OPTIMA PARTNERS SAS - Excellence en Conseil & Ingénierie">
+    <meta property="og:description" content="Accompagnons vos projets innovants et durables en RDC et à l'international">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3a52;
+            --primary-dark: #0f2438;
+            --primary-light: #2d5a7b;
+            --accent: #d4af37;
+            --accent-light: #e8c652;
+            --background: #f8f9fa;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, #f0c855 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--accent) 0%, #f0c855 100%);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* HERO BANNER */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #0a1620 100%);
+            color: var(--white);
+            padding: 120px 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(45, 90, 123, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, #f0c855 100%);
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, #f0c855 100%);
+            border-radius: 2px;
+        }
+
+        /* KEY FIGURES */
+        .key-figures {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            margin: 60px 0;
+            padding: 60px 2rem;
+            border-radius: 15px;
+        }
+
+        .figures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .figure-item {
+            padding: 2rem;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .figure-item:hover {
+            transform: translateY(-5px);
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+        }
+
+        .figure-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .figure-label {
+            font-size: 1rem;
+            color: #d0d0d0;
+        }
+
+        /* SERVICES GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            border-top: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-top-color: var(--accent);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent) 0%, #f0c855 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* VALUES GRID */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(26, 58, 82, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(26, 58, 82, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* PROJECTS GALLERY */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-image::after {
+            opacity: 1;
+        }
+
+        .project-info {
+            padding: 2rem;
+        }
+
+        .project-category {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .project-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+            color: var(--accent);
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 80px 2rem;
+            border-radius: 15px;
+            margin: 60px 0;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: #d0d0d0;
+            margin: 0;
+        }
+
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #f0c855;
+        }
+
+        /* FORM */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: var(--white);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, var(--accent) 0%, #f0c855 100%);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 2rem 20px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #b0b0b0;
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* ANIMATIONS */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 80px 1.5rem;
+                min-height: 500px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            section {
+                padding: 60px 1.5rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card, .expertise-item {
+                padding: 1.5rem;
+            }
+
+            .figures-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            .logo-icon {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <span class="text-gold">◆</span> OPTIMA PARTNERS
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">OP</div>
+                <span>OPTIMA PARTNERS</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="strengths.html">Nos Atouts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Réalisations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-gold text-dark ms-2" href="contact.html">Nous Contacter</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="cta-button">EN</button></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner d-flex align-items-center" style="background: linear-gradient(135deg, rgba(15, 32, 65, 0.9) 0%, rgba(25, 50, 100, 0.8) 100%), url('assets/images/hero-bg.jpg') no-repeat center/cover; min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-3 fw-bold text-white mb-4">
-                        Conseil Stratégique • Ingénierie • Innovation
-                    </h1>
-                    <p class="lead text-gold fs-5 mb-4">
-                        Accompagnons les entreprises, institutions et investisseurs dans la conception, le financement et la mise en œuvre de projets innovants et durables.
-                    </p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="services.html" class="btn btn-gold btn-lg px-5 text-dark fw-bold">
-                            <i class="fas fa-arrow-right me-2"></i> Nos Services
-                        </a>
-                        <a href="contact.html" class="btn btn-outline-gold btn-lg px-5 text-white fw-bold">
-                            <i class="fas fa-envelope me-2"></i> Nous Contacter
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-none d-lg-block">
-                    <div class="floating-card bg-gold bg-opacity-10 p-5 rounded-4 border border-gold">
-                        <div class="text-center">
-                            <i class="fas fa-rocket text-gold" style="font-size: 3rem;"></i>
-                            <h5 class="text-white mt-3">Performance & Innovation</h5>
-                            <p class="text-light small">Solutions intégrées pour votre succès</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- HERO BANNER -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Excellence en Conseil Stratégique & Ingénierie</h1>
+            <p class="hero-tagline">Conseil stratégique – Ingénierie – Investissement – Performance & Innovation</p>
+            <p class="hero-description">
+                OPTIMA PARTNERS SAS accompagne les entreprises, institutions, investisseurs et organisations dans la conception, 
+                le financement, l'ingénierie et la mise en œuvre de projets innovants et durables en République Démocratique du Congo et à l'international.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('services')">Nos Services</button>
+                <button class="btn-secondary" onclick="scrollToSection('contact')">Nous Contacter</button>
             </div>
         </div>
     </section>
 
-    <!-- Key Figures Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="row text-center g-4">
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">50+</h3>
-                        <p class="text-dark fw-5">Projets Réalisés</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">100+</h3>
-                        <p class="text-dark fw-5">Clients Satisfaits</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">15+</h3>
-                        <p class="text-dark fw-5">Experts Qualifiés</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-card">
-                        <h3 class="text-gold fw-bold" style="font-size: 2.5rem;">7</h3>
-                        <p class="text-dark fw-5">Domaines d'Expertise</p>
-                    </div>
-                </div>
+    <!-- KEY FIGURES -->
+    <section class="key-figures">
+        <div class="figures-grid">
+            <div class="figure-item">
+                <div class="figure-number">50+</div>
+                <div class="figure-label">Projets Réalisés</div>
+            </div>
+            <div class="figure-item">
+                <div class="figure-number">15+</div>
+                <div class="figure-label">Années d'Expérience</div>
+            </div>
+            <div class="figure-item">
+                <div class="figure-number">200+</div>
+                <div class="figure-label">Professionnels Engagés</div>
+            </div>
+            <div class="figure-item">
+                <div class="figure-number">7</div>
+                <div class="figure-label">Domaines d'Expertise</div>
             </div>
         </div>
     </section>
 
-    <!-- About Brief Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4" style="color: #0f2041;">Qui Sommes-Nous ?</h2>
-                    <p class="text-secondary mb-3">
-                        OPTIMA PARTNERS SAS est un cabinet de conseil, d'ingénierie et d'investissement basé à Kinshasa, 
-                        spécialisé dans la conception, le financement et la mise en œuvre de projets innovants et durables.
-                    </p>
-                    <p class="text-secondary mb-3">
-                        Avec une approche intégrée et multidisciplinaire, nous accompagnons les entreprises, institutions, 
-                        investisseurs et organisations à travers la RDC et l'international.
-                    </p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="about.html" class="btn btn-dark fw-bold">En Savoir Plus</a>
-                        <a href="contact.html" class="btn btn-outline-dark fw-bold">Prendre un RDV</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-gold p-5 rounded-4 text-white">
-                        <h4 class="mb-3">Notre Slogan</h4>
-                        <blockquote class="display-6 fw-bold mb-0">
-                            "Conseil stratégique – Ingénierie – Investissement – Performance & Innovation"
-                        </blockquote>
-                    </div>
-                </div>
+    <!-- À PROPOS -->
+    <section id="apropos">
+        <h2 class="section-title">À Propos de OPTIMA PARTNERS SAS</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+            <div>
+                <h3 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 1.5rem;">Notre Positionnement</h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem;">
+                    OPTIMA PARTNERS SAS est un cabinet de conseil intégré, basé à Kinshasa (RDC), qui combine expertise stratégique, 
+                    ingénierie de haut niveau et financement innovant. Nous opérons en tant que partenaire de confiance pour les organisations 
+                    publiques, privées et les investisseurs.
+                </p>
+                <p style="color: var(--text-light); line-height: 1.8;">
+                    Notre approche est centrée sur la création de valeur durable, l'innovation et la transformation du paysage économique congolais 
+                    et africain dans les domaines critiques de développement.
+                </p>
+            </div>
+            <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
+                        border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; 
+                        color: var(--white); font-size: 4rem;">
+                🏢
             </div>
         </div>
-    </section>
 
-    <!-- Services Overview -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5" style="color: #0f2041; font-size: 2.5rem;">
-                Nos Domaines d'Expertise
-            </h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-chart-line text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Conseil Stratégique</h5>
-                        <p class="text-secondary small">Transformation organisationnelle et optimisation des performances</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-cogs text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Ingénierie</h5>
-                        <p class="text-secondary small">Génie civil, industriel, minier, mécanique et électrique</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-lightbulb text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Innovation</h5>
-                        <p class="text-secondary small">Transformation digitale, IA et solutions technologiques</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-dollar-sign text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Investissement</h5>
-                        <p class="text-secondary small">Levée de fonds et structuration financière</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-building text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Construction</h5>
-                        <p class="text-secondary small">Infrastructures et solutions intégrées</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card h-100">
-                        <div class="service-icon bg-gold rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <i class="fas fa-graduation-cap text-white" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Formation & RH</h5>
-                        <p class="text-secondary small">Renforcement des capacités et gestion des ressources humaines</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="services.html" class="btn btn-dark btn-lg px-5 fw-bold">
-                    Voir Tous les Services <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="py-5" style="background: linear-gradient(135deg, #0f2041 0%, #193264 100%);">
-        <div class="container">
-            <h2 class="text-center text-white fw-bold mb-5" style="font-size: 2.5rem;">Nos Valeurs Fondamentales</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-star text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Innovation</h5>
-                            <p class="text-light small">Créativité et solutions novatrices</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-award text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Excellence</h5>
-                            <p class="text-light small">Qualité supérieure en tout</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-handshake text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Intégrité</h5>
-                            <p class="text-light small">Éthique et transparence</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="d-flex gap-3 mb-4">
-                        <div class="flex-shrink-0">
-                            <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-rocket text-white" style="font-size: 1.5rem;"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h5 class="text-white fw-bold">Performance</h5>
-                            <p class="text-light small">Résultats mesurables</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-5 bg-gold">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h3 class="fw-bold text-dark mb-2">Prêt à transformer votre projet ?</h3>
-                    <p class="text-dark mb-0">Contactez-nous dès maintenant pour une consultation gratuite avec nos experts</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <a href="contact.html" class="btn btn-dark btn-lg px-4 fw-bold">
-                        <i class="fas fa-envelope me-2"></i> Consultation Gratuite
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">OPTIMA PARTNERS</h6>
-                    <p class="small">Conseil stratégique, ingénierie et innovation en RDC</p>
-                    <div class="d-flex gap-2 mt-3">
-                        <a href="#" class="text-gold"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gold"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-gold"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gold"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">Navigation</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html" class="text-light text-decoration-none">Accueil</a></li>
-                        <li><a href="about.html" class="text-light text-decoration-none">�� Propos</a></li>
-                        <li><a href="services.html" class="text-light text-decoration-none">Services</a></li>
-                        <li><a href="projects.html" class="text-light text-decoration-none">Réalisations</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">Contact</h6>
-                    <p class="small mb-2">
-                        <i class="fas fa-phone text-gold me-2"></i>
-                        <a href="tel:+243979277469" class="text-light text-decoration-none">+243 979 277 469</a>
-                    </p>
-                    <p class="small mb-2">
-                        <i class="fas fa-envelope text-gold me-2"></i>
-                        <a href="mailto:office@optima-partnersas.com" class="text-light text-decoration-none">office@optima-partnersas.com</a>
-                    </p>
-                    <p class="small">
-                        <i class="fas fa-map-marker-alt text-gold me-2"></i>
-                        Kinshasa, RDC
+        <div style="background: var(--white); padding: 3rem; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1.5rem; text-align: center;">Notre Vision, Mission et Valeurs</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="padding: 2rem; background: var(--background); border-radius: 10px; border-left: 5px solid var(--accent);">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.1rem;">🎯 Vision</h4>
+                    <p style="color: var(--text-light);">
+                        Être le partenaire stratégique de référence en Afrique pour la conception et la mise en œuvre de projets innovants, 
+                        durables et créateurs de valeur.
                     </p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-bold text-gold mb-3">Ressources</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Télécharger Brochure</a></li>
-                        <li><a href="contact.html" class="text-light text-decoration-none">Demander Consultation</a></li>
+
+                <div style="padding: 2rem; background: var(--background); border-radius: 10px; border-left: 5px solid var(--accent);">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.1rem;">🚀 Mission</h4>
+                    <p style="color: var(--text-light);">
+                        Fournir des solutions intégrées de conseil, d'ingénierie et de financement pour transformer les ambitions 
+                        en réalités pérennes.
+                    </p>
+                </div>
+
+                <div style="padding: 2rem; background: var(--background); border-radius: 10px; border-left: 5px solid var(--accent);">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.1rem;">⭐ Valeurs Clés</h4>
+                    <ul style="list-style: none; color: var(--text-light);">
+                        <li>✓ <strong>Innovation</strong> - Créativité et approches novatrices</li>
+                        <li>✓ <strong>Excellence</strong> - Qualité irréprochable</li>
+                        <li>✓ <strong>Intégrité</strong> - Éthique et transparence</li>
+                        <li>✓ <strong>Performance</strong> - Résultats mesurables</li>
+                        <li>✓ <strong>Durabilité</strong> - Impact long terme</li>
                     </ul>
                 </div>
             </div>
-            <hr class="border-secondary">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="small mb-0">&copy; 2024 OPTIMA PARTNERS SAS. Tous droits réservés.</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <p class="small mb-0">
-                        <a href="#" class="text-light text-decoration-none">Politique de Confidentialité</a> | 
-                        <a href="#" class="text-light text-decoration-none">Conditions d'Utilisation</a>
-                    </p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2 class="section-title">Nos Services</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Appui Technique & Développement de Projets</h3>
+                <p>Conception et opérationnalisation de projets, études de faisabilité, assistance technique, développement de partenariats et diagnostic de sites.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Conseil Stratégique & Transformation</h3>
+                <p>Gouvernance, management stratégique, performance organisationnelle, optimisation des processus et outils de gestion sur mesure.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Ingénierie, Technologies & Innovation</h3>
+                <p>Génie civil, industriel, minier, mécanique, électrique, chimique, informatique et transformation digitale avec intelligence artificielle.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h3>Investissement, Financement & FinTech</h3>
+                <p>Levée de fonds, structuration financière, facilitation d'investissements et solutions FinTech innovantes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Construction & Solutions Intégrées</h3>
+                <p>Infrastructures, entrepreneuriat, solutions multisectorielles et gestion complète de projets complexes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">👥</div>
+                <h3>Formation, Recherche & Capital Humain</h3>
+                <p>Formation professionnelle, recherche et développement, renforcement des capacités, transfert de connaissances et gestion RH.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎤</div>
+                <h3>Événementiel Stratégique & Institutionnel</h3>
+                <p>Conférences, forums, sommets, ateliers techniques, festivals et cérémonies institutionnelles d'envergure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATOUTS -->
+    <section style="background: var(--background);">
+        <h2 class="section-title">Nos Atouts Différenciant</h2>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🔗</div>
+                <h3>Approche Intégrée</h3>
+                <p>Combination de conseil stratégique, ingénierie et financement dans une seule relation de partenariat.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🎯</div>
+                <h3>Expertise Multidisciplinaire</h3>
+                <p>Équipes couvrant tous les domaines clés : stratégie, ingénierie, finance, RH et technologie.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🚀</div>
+                <h3>Innovation & Digital</h3>
+                <p>Intégration de l'IA, technologies disruptives et approches modernes dans tous nos services.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h3>Réseau Stratégique</h3>
+                <p>Partenaires de confiance à l'international, accès à l'expertise mondiale et à des opportunités.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">✅</div>
+                <h3>Accompagnement Complet</h3>
+                <p>Du diagnostic initial à la mise en œuvre et au suivi post-projet pour assurer la durabilité.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">🌱</div>
+                <h3>Durabilité & Impact</h3>
+                <p>Création de valeur économique, sociale et environnementale pour les générations futures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉQUIPE & LEADERSHIP -->
+    <section>
+        <h2 class="section-title">Leadership & Équipe d'Experts</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">👨‍🔬</div>
+                <div class="project-info">
+                    <p class="project-category">Expert Senior</p>
+                    <h3>Ghislain Kabumba R. Baderha</h3>
+                    <p>Chercheur & Conférencier | Spécialiste RSE, ESG, SLO | Gestion des Ressources Naturelles | Géologue & Environnementaliste</p>
+                    <a href="#" class="read-more">Voir le profil →</a>
                 </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-image">👔</div>
+                <div class="project-info">
+                    <p class="project-category">Direction</p>
+                    <h3>Direction Générale</h3>
+                    <p>Équipe de direction expérimentée avec plus de 50 ans d'expertise combinée en conseil stratégique et ingénierie.</p>
+                    <a href="#" class="read-more">En savoir plus →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">👨‍💼</div>
+                <div class="project-info">
+                    <p class="project-category">Expertise</p>
+                    <h3>Consultants Seniors</h3>
+                    <p>Consultants accrédités spécialisés dans les domaines clés : stratégie, ingénierie, finance et technologie.</p>
+                    <a href="#" class="read-more">Découvrir →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉALISATIONS -->
+    <section id="projets" style="background: var(--background);">
+        <h2 class="section-title">Réalisations & Projets Phares</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🏭</div>
+                <div class="project-info">
+                    <p class="project-category">Ingénierie Minière</p>
+                    <h3>Optimisation de Site Minier</h3>
+                    <p>Diagnostic complet et optimisation de processus d'exploitation minière augmentant la productivité de 40%.</p>
+                    <a href="#" class="read-more">Étude de cas →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🏗️</div>
+                <div class="project-info">
+                    <p class="project-category">Infrastructure</p>
+                    <h3>Projet Infrastructure Urbaine</h3>
+                    <p>Conception et financement d'infrastructure majeure en zone urbaine, création de 500+ emplois.</p>
+                    <a href="#" class="read-more">Détails →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">💡</div>
+                <div class="project-info">
+                    <p class="project-category">Transformation Digitale</p>
+                    <h3>Modernisation d'Entreprise</h3>
+                    <p>Implémentation complète de solution ERP et transformation digitale réduisant les coûts de 35%.</p>
+                    <a href="#" class="read-more">Voir plus →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">💰</div>
+                <div class="project-info">
+                    <p class="project-category">Financement</p>
+                    <h3>Structuration Financière</h3>
+                    <p>Levée de fonds de $20M pour financer un projet multisectoriel complexe sur 10 ans.</p>
+                    <a href="#" class="read-more">Cas d'étude →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🌱</div>
+                <div class="project-info">
+                    <p class="project-category">Développement Durable</p>
+                    <h3>Projet Agroalimentaire</h3>
+                    <p>Développement intégré d'une chaîne de valeur agroalimentaire respectueuse de l'environnement.</p>
+                    <a href="#" class="read-more">Découvrir →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🎓</div>
+                <div class="project-info">
+                    <p class="project-category">Capital Humain</p>
+                    <h3>Programme Formation</h3>
+                    <p>Formation de 1000+ professionnels en compétences techniques et management pour le secteur privé.</p>
+                    <a href="#" class="read-more">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 style="font-size: 2rem; margin-bottom: 2rem;">Nous Contacter</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>Localisation</h3>
+                        <p>Kinshasa, République Démocratique du Congo</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:office@optima-partnersas.com">office@optima-partnersas.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <a href="tel:+243979277469">+243 979 277 469</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <div>
+                        <h3>WhatsApp Business</h3>
+                        <a href="https://wa.me/243979277469" target="_blank">Commencer une conversation</a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <p style="font-weight: 500; margin-bottom: 1rem;">Suivez-nous</p>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <h3 style="margin-bottom: 1.5rem;">Envoyer un Message</h3>
+                
+                <div class="form-group">
+                    <label for="name">Nom Complet *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Envoyer le Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>À Propos</h4>
+                <p>
+                    OPTIMA PARTNERS SAS est un cabinet leader en conseil stratégique, ingénierie et développement de projets 
+                    en Afrique, spécialisé dans la création de valeur durable.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="#services">Conseil Stratégique</a><br>
+                <a href="#services">Ingénierie & Technologies</a><br>
+                <a href="#services">Financement & Investissement</a><br>
+                <a href="#services">Capital Humain</a><br>
+                <a href="#services">Développement de Projets</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <a href="#">Blog & Actualités</a><br>
+                <a href="#">Télécharger Brochures</a><br>
+                <a href="#">Demander une Consultation</a><br>
+                <a href="#">Conditions d'Utilisation</a><br>
+                <a href="#">Politique de Confidentialité</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><strong>Adresse</strong><br>
+                Kinshasa, RDC</p>
+                <p style="margin-top: 1rem;"><strong>Email</strong><br>
+                <a href="mailto:office@optima-partnersas.com">office@optima-partnersas.com</a></p>
+                <p style="margin-top: 1rem;"><strong>Téléphone</strong><br>
+                <a href="tel:+243979277469">+243 979 277 469</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 OPTIMA PARTNERS SAS. Tous droits réservés. | Développé par <a href="#" style="color: var(--accent); text-decoration: none;">AkiliMali Technology</a></p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script>
+        // SMOOTH SCROLL FOR NAVIGATION
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // FORM SUBMISSION
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            alert(`Merci ${name}! Votre message a été reçu. Nous vous répondrons à ${email} dans les 24 heures.`);
+            event.target.reset();
+        }
+
+        // SCROLL ANIMATIONS
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // DYNAMIC YEAR IN FOOTER
+        const year = new Date().getFullYear();
+        document.querySelector('.footer-bottom p').textContent = 
+            `© ${year} OPTIMA PARTNERS SAS. Tous droits réservés. | Développé par AkiliMali Technology`;
+    </script>
 </body>
 </html>
